@@ -21,6 +21,8 @@ RUN apt-get update -qq && \
 # Set working directory
 WORKDIR /app
 
+# Copy package files first for better Docker layer caching
+COPY package*.json ./
 
 # Install Node.js dependencies
 RUN npm install --omit=dev
