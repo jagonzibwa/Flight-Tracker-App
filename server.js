@@ -7,7 +7,7 @@ const app = express();
 const PORT = 8000;
 
 app.use(cors());
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/api/flight', async (req, res) => {
   console.log('Received flight search request');
@@ -38,6 +38,10 @@ app.get('/api/flight', async (req, res) => {
     res.status(500).json({ error: 'Failed to fetch flight data' });
   }
 });
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+})
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

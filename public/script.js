@@ -2,7 +2,8 @@ async function searchFlight() {
     console.log('Searching for flight...');
     const flight = document.getElementById('flightNumber').value.trim().replace(/\s+/g, '');
     console.log(` Cleaned Flight number entered: ${flight}`);
-    const res = await fetch(`http://localhost:8000/api/flight?flight=${flight}`);
+    const API_URL = window.location.origin;
+    const res = await fetch(`${API_URL}/api/flight?flight=${flight}`);
     const data = await res.json();
     const div = document.getElementById('result');
     if (data.error) {
