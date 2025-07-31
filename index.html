@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1> Flight Tracker</h1>
+      <p>Track your flight in real time</p>
+    </header>
+
+    <form id="flightForm">
+      <label for="flightNumber">Flight Number</label>
+      <input
+        type="text"
+        id="flightNumber"
+        placeholder="e.g. KL446"
+        required
+      />
+      <button type="submit" id="searchButton">Search</button>
+    </form>
+
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
