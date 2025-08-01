@@ -3,6 +3,7 @@
 
 This is a simple flight tracking application that uses the [AviationStack API](https://aviationstack.com/) to fetch and display real-time flight information.
 
+Demo Video: https://youtu.be/EgH7cSsWGfo
 
 # Requirements
 
@@ -12,6 +13,7 @@ To run this app, make sure you have the following installed:
 - npm (comes with Node.js)
 - Docker (only if deploying in containers)
 - Internet connection to access the API
+- Flight numbers: https://www.flightradar24.com/data/airports/kgl/arrivals 
 
 
 # How to Run the App Locally
@@ -103,7 +105,6 @@ Option 1: Clone using Git
 ```bash
 git clone https://github.com/yourusername/flight-tracker-app.git
 cd flight-tracker-app
-
 
 
 # 3. Install Dependencies
