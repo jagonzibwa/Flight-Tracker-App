@@ -76,7 +76,7 @@ input:focus {
 button {
   background-color: var(--primary);
   color: #fff;
-  border: 1px solid red;
+  border: none;
   padding: 12px;
   font-size: 16px;
   border-radius: var(--radius);

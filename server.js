@@ -7,7 +7,7 @@ const app = express();
 const PORT = 8000;
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'docs')));
 
 app.get('/api/flight', async (req, res) => {
   console.log('Received flight search request');
@@ -40,7 +40,7 @@ app.get('/api/flight', async (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'docs', 'index.html'));
 })
 
 app.listen(PORT, () => {
